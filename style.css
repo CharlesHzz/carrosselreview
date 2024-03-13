@@ -1,0 +1,135 @@
+:root{
+    --cor-um:#1B1B1E ;
+    --cor-dois: #373F51;
+    --cor-tres:#58A4B0;
+    --cor-quatro:#A9BCD0;
+    --cor-cinco:#D8DBE2;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(images/Simple\ Shiny\ \(1\).svg);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+.tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--cor-cinco);
+    text-align: end;
+}
+.tittle h2{
+    font: bold 30px Arial, Helvetica, sans-serif;
+}
+.linha{
+    background-color: var(--cor-tres);
+    height: 4px;
+    width: 100px;
+    margin-top: 8px;
+}
+
+.cartao{
+    background-color: var(--cor-cinco);
+    width: 780px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -200px;
+}
+
+.card-foto{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-color: var(--cor-tres);
+    display:flex;
+    position: absolute;
+    top: 5%;
+}
+.nome{
+    color: var(--cor-um);
+    position: absolute;
+    top: 33%;
+    font: bold 17px Arial, Helvetica, sans-serif;
+}
+.profissao{
+    color: var(--cor-dois);
+    position: absolute;
+    top: 38%;
+    font: bold 10px Arial, Helvetica, sans-serif;
+}
+.descricao{
+    color: var(--cor-um);
+    position: absolute;
+    width: 700px;
+    top: 43%;
+    font: normal 15px Arial, Helvetica, sans-serif;
+
+}
+.descricao, p{
+    color: var(--cor-um);
+    text-align: justify;
+}
+.botoes{
+    position: absolute;
+    top: 78%;
+}
+.surpresa{
+    position: absolute;
+    top: 88%;
+}
+
+button {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 24px;
+    font-size: 18px;
+    color: var(--cor-tres);
+    border: 1px solid --cor-tres;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--cor-tres);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  button:hover::before {
+    scale: 3;
+  }
+  
+  button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  }
+  
+  button:active {
+    scale: 1;
+  }
